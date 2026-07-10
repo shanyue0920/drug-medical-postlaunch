@@ -1,7 +1,7 @@
 ---
 name: drug-medical-postlaunch
 slug: drug-medical-postlaunch
-displayName: 药品上市后医学
+displayName: 药品上市后医学分析
 author: zhouwei
 version: 1.4.0
 summary: 上市后医学(Medical Affairs Post-launch)结构化分析。11维完整工作流：治疗领域与患者洞察→循证证据深度解读(原文扒数据+提炼推广数据点)→竞品对比→优劣势与缺口→策略→证据生成→核心信息输出→KOL传递→MSL传递→跨部门+学术传播→合规把关。从领域全景到产品深挖到弹药分发到合规检查，一套闭环。引用 drug-base 底座。
