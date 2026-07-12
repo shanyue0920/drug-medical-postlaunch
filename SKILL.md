@@ -3,7 +3,7 @@ name: drug-medical-postlaunch
 slug: drug-medical-postlaunch
 displayName: 药品上市后医学分析
 author: zhouwei
-version: 2.0.0
+version: 2.0.1
 summary: 上市后医学(Medical Affairs Post-launch)结构化分析。11维完整工作流：治疗领域与患者洞察→循证证据深度解读(原文扒数据+提炼推广数据点)→竞品对比→优劣势与缺口→策略→证据生成→核心信息输出→KOL传递→MSL传递→跨部门+学术传播→合规把关。从领域全景到产品深挖到弹药分发到合规检查，一套闭环。本 skill 内置知识库。
 license: MIT
 description: >
@@ -16,7 +16,7 @@ description: >
   → L8 KOL管理与信息传递 → L9 MSL一线执行 → L10 学术传播与跨部门支持
   → L11 合规审核与边界。
   核心逻辑：领域全景→产品深挖→策略推导→弹药分发→合规检查。
-  本 skill 内置共享底座，强制数据校准(🔍/💭)与医学信息框定，划清医学独占/协同/非医学边界。
+  本 skill 内置基础模块（foundation.md），强制数据校准(🔍/💭)与医学信息框定，划清医学独占/协同/非医学边界。
   按使用者水平切换新人/资深深度档位。
   触发语示例：「分析一下这个治疗领域」「患者旅程怎么画」
   「循证证据怎么解读」「竞品对比一下」「我们优势在哪」
@@ -26,8 +26,8 @@ allowed-tools: WebSearch, WebFetch, Read, Write
 ---
 
 
-> **🔧 自包含声明**：本 skill 已**完全自包含**，可独立运行，无需安装任何其他 skill 或外部共享底座。
-> 内置共享知识存于本 skill 的 `references/`：临床档案框架与校准规则见 `references/foundation.md`；循证三件套见 `references/evidence-levels.md`、`references/drug-classes.md`、`references/market-methodology.md`；专利FTO框架见 `references/foundation.md` §三。
+> **🔧 自包含声明**：本 skill 已**完全自包含**，可独立运行，无需安装任何其他 skill 或外部依赖。
+> 内置共享知识存于本 skill 的 `references/`：临床档案框架与校准规则见 `references/foundation.md`；循证三件套见 `references/evidence-levels.md`、`references/drug-classes.md`、`references/market-methodology.md`；专利FTO框架见 `references/foundation.md` §3。
 
 # 上市后医学分析 Skill
 从上市后医学视角，按真实工作流对已上市产品做结构化分析。**领域全景为起点，产品证据为核心，策略为结论，核心信息为弹药，合规为安全阀。**
@@ -41,7 +41,7 @@ allowed-tools: WebSearch, WebFetch, Read, Write
 
 本质：上市后医学既要懂产品（L2-L11），更要懂领域（L1）——MSL 的价值不只是传达产品数据，更是用治疗领域的深度洞察驱动策略和影响 KOL。
 
-**内置共享知识**：本 Skill 内置共享底座（临床档案/校准规则/循证三件套/专利FTO）——临床档案、数据校准规则(🔍/💭)、循证三件套、专利FTO模块。
+**内置共享知识**：本 Skill 内置基础模块（foundation.md）（临床档案/校准规则/循证三件套/专利FTO）——临床档案、数据校准规则(🔍/💭)、循证三件套、专利FTO模块。
 
 ## 2. 前置检查
 - 未给出明确产品名称/治疗领域/上市状态时，先追问，绝不凭空分析。
@@ -409,7 +409,7 @@ RWE：设计/数据源/样本量/偏倚/与RCT一致性
 
 ---
 
-## 7. 数据校准规则（强制·与 本 skill 内置 对齐）
+## 7. 数据校准规则（强制·与 references/foundation.md 对齐）
 - **来源分级标注**：🔍已查证 / 💭推测。禁止把 💭 当 🔍。
 - **关键事实交叉校验**：≥2 独立来源一致方可确定；否则标「待核实」。
 - **时效校准**：标「截至 YYYY-MM」，不得沿用旧记忆。
@@ -436,7 +436,7 @@ RWE：设计/数据源/样本量/偏倚/与RCT一致性
 - 禁止编造数据/KOL信息/竞品情报；来源不明标💭。
 - 间接对比标注局限；off-label严格区分MSL/销售。
 - 免责：仅供学习/医学事务参考，不构成医疗或投资建议。
-- 底座引用：本 skill 内置 提供临床档案+校准规则+循证三件套+专利FTO。
+- 基础引用：references/foundation.md 提供临床档案+校准规则+循证三件套+专利FTO。
 
 ---
 署名：zhouwei | WeChat：Shanyue0920
